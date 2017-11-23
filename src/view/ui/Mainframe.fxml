@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="856.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.MenuBar">
+   <children>
+      <Pane layoutX="1.0" prefHeight="279.0" prefWidth="261.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <StackPane layoutX="35.0" layoutY="53.0" prefHeight="168.0" prefWidth="189.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="174.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/images.jpeg" />
+                     </image>
+                  </ImageView>
+               </children></StackPane>
+            <Label alignment="CENTER" layoutX="-4.0" layoutY="218.0" prefHeight="61.0" prefWidth="267.0" text="UCSM" textAlignment="CENTER">
+               <font>
+                  <Font name="AdobeArabic-Regular" size="18.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <VBox alignment="TOP_CENTER" layoutX="-2.0" layoutY="277.0" prefHeight="579.0" prefWidth="269.0" spacing="10.0" style="-fx-background-color: TEAL;">
+         <children>
+            <JFXButton fx:id="btn_Setting" onAction="#btn_Setting_Act" prefHeight="61.0" prefWidth="269.0" ripplerFill="#f5f5f5" text=" Setting" textFill="WHITE">
+               <font>
+                  <Font name="Andale Mono" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/icons8-Settings.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btn_About" onAction="#btn_About_Act" prefHeight="61.0" prefWidth="269.0" ripplerFill="#f5f5f5" text=" About" textFill="WHITE">
+               <font>
+                  <Font name="Andale Mono" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/icons8-About-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton prefHeight="61.0" prefWidth="269.0" ripplerFill="#f5f5f5" text="Exit" textFill="WHITE">
+               <font>
+                  <Font name="Andale Mono" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

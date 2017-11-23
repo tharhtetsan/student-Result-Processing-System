@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1320.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.Student_listView_Controller">
+   <children>
+      <VBox layoutX="-1.0" layoutY="-2.0" prefHeight="720.0" prefWidth="1480.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="1476.0" spacing="30.0">
+               <children>
+                  <ToolBar prefHeight="71.0" prefWidth="1537.0">
+                     <items>
+                        <HBox prefHeight="59.0" prefWidth="430.0">
+                           <children>
+                              <JFXRadioButton fx:id="rdo_ViewAll" onAction="#rdo_ViewAllAction" prefHeight="63.0" prefWidth="137.0" text="View all">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="rdo_toggleGroup" />
+                                 </toggleGroup></JFXRadioButton>
+                              <JFXRadioButton fx:id="rdo_SearchNRC" onAction="#rdo_SearchNRC_Act" prefHeight="59.0" prefWidth="164.0" text="Search by NRC" toggleGroup="$rdo_toggleGroup" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="59.0" prefWidth="597.0" spacing="30.0">
+                           <children>
+                              <JFXComboBox fx:id="cbo_year" onAction="#cbo_year_Act" prefHeight="42.0" prefWidth="198.0" promptText="Year" />
+                              <JFXComboBox fx:id="cbo_nrc" onAction="#cbo_nrc_Act" prefHeight="43.0" prefWidth="261.0" promptText="NRC" />
+                              <JFXButton fx:id="btn_serarch" onAction="#btn_searchAction" prefHeight="33.0" prefWidth="68.0" style="-fx-background-color: #3d9970;" text=".">
+                                 <graphic>
+                                    <ImageView fx:id="btn_search" fitHeight="42.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/search.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </items>
+                  </ToolBar>
+               </children>
+            </HBox>
+            <Pane fx:id="secondPane" prefHeight="635.0" prefWidth="1323.0" />
+         </children>
+      </VBox>
+   </children>
+</Pane>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import application.Card?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1323.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.Generate_Transcript_Controller">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ToolBar prefHeight="71.0" prefWidth="1456.0">
+               <items>
+                  <HBox alignment="CENTER" prefHeight="51.0" prefWidth="963.0" spacing="20.0">
+                     <children>
+                        <JFXComboBox fx:id="cbo_Aceyear" onAction="#cbo_Aceyear_Act" prefHeight="47.0" prefWidth="234.0" promptText="Acedimic Year" />
+                        <JFXComboBox fx:id="cbo_Major" onAction="#cbo_Major_Act" prefHeight="44.0" prefWidth="231.0" promptText="Major" />
+                        <JFXComboBox fx:id="cbo_stuNRC" onAction="#cbo_stuNRC_Act" prefHeight="41.0" prefWidth="283.0" promptText="Student NRC" />
+                        <Button fx:id="btn_ViewResult" mnemonicParsing="false" onAction="#btn_ViewResult_Act" prefHeight="40.0" prefWidth="153.0" text="View Result" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="350.0" spacing="20.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Transcript Print Count  :" wrappingWidth="230.9820556640625">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txt_tCount" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="142.2750244140625">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </items>
+            </ToolBar>
+            <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1489.0">
+               <content>
+                  <AnchorPane prefHeight="1476.0" prefWidth="1470.0">
+                     <children>
+                        <Card layoutX="82.0" layoutY="14.0" prefHeight="1194.0" prefWidth="1333.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="988.0" prefWidth="1466.0" spacing="30.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="168.0" prefWidth="1375.0">
+                                             <children>
+                                                <ImageView fitHeight="167.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../images/images.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                                <VBox alignment="CENTER" prefHeight="159.0" prefWidth="743.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="UNIVERSITY OF COMPUTER STUDIES, MANDALAY" textAlignment="CENTER" wrappingWidth="783.915283203125">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PATHEINGYI TOWNSHIP, MANDALAY" textAlignment="CENTER" wrappingWidth="802.2306518554688">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="THE REPUBLIC OF THE UNION OF MYANMAR" textAlignment="CENTER">
+                                                         <font>
+                                                            <Font size="24.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <Line endX="1250.0" startX="-100.0" strokeWidth="2.0" />
+                                       </children>
+                                    </VBox>
+                                    <Text fx:id="stu_date" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" textAlignment="RIGHT" wrappingWidth="1071.929931640625">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="1259.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Subject :" wrappingWidth="96.60386657714844">
+                                             <font>
+                                                <Font name="Times New Roman" size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="stu_sub" strokeType="OUTSIDE" strokeWidth="0.0" text="-" wrappingWidth="721.5921478271484">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <Text fx:id="stu_about" strokeType="OUTSIDE" strokeWidth="0.0" text="-" wrappingWidth="1082.6898193359375">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Academic Transcript is as follow " underline="true" wrappingWidth="355.51275634765625">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <AnchorPane prefHeight="474.0" prefWidth="1275.0">
+                                       <children>
+                                          <GridPane layoutX="66.0" prefHeight="449.0" prefWidth="1117.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2. List of all subjects taken and the grades obtained certificates" wrappingWidth="558.0118103027344" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1. Date of enrollment" wrappingWidth="559.5458984375">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3. Title of degree awarded and Date of conferment" wrappingWidth="561.0799407958984" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4. Final Year  G.P.A" wrappingWidth="559.5459136962891" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5. Explanation of grades" wrappingWidth="562.6140441894531" GridPane.rowIndex="4">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="stu_t1" strokeType="OUTSIDE" strokeWidth="0.0" text="-" wrappingWidth="556.4777221679688" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="stu_t2" strokeType="OUTSIDE" strokeWidth="0.0" text="-" wrappingWidth="561.0800170898438" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="stu_t3" strokeType="OUTSIDE" strokeWidth="0.0" text="-" wrappingWidth="558.0118408203125" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="stu_t4" strokeType="OUTSIDE" strokeWidth="0.0" text="-" wrappingWidth="560.7604370117188" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="stu_t5" strokeType="OUTSIDE" strokeWidth="0.0" text="-" wrappingWidth="559.5458374023438" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <Text fx:id="txt_about1" strokeType="OUTSIDE" strokeWidth="0.0" text="-" wrappingWidth="1145.87109375">
+                                       <font>
+                                          <Font name="Times New Roman" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Registrar" textAlignment="CENTER" wrappingWidth="438.55035400390625">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="University Of Computer Studies, Mandalay  Myanmar" textAlignment="CENTER" wrappingWidth="443.86676025390625">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Card>
+                        <HBox alignment="CENTER" layoutX="121.0" layoutY="1308.0" prefHeight="106.0" prefWidth="1200.0" spacing="500.0">
+                           <children>
+                              <Button fx:id="btn_Clear" mnemonicParsing="false" onAction="#btn_Clear_Act" prefHeight="42.0" prefWidth="222.0" text="Clear" />
+                              <Button fx:id="btn_Generate" mnemonicParsing="false" onAction="#btn_Generate_Act" prefHeight="45.0" prefWidth="246.0" text="Generate" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

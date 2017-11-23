@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-08-21T14:51:10 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Result_Generate_Tamplate " pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c50c3f64-d0d5-43ce-af4e-8523e3513f9b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F2F5F7">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FAFAFA">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="stuMarks" uuid="2e8fd443-8a18-4771-92ca-3e1747dcff11">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="no" class="java.lang.String"/>
+		<field name="sub" class="java.lang.String"/>
+		<field name="mark" class="java.lang.String"/>
+		<field name="grade" class="java.lang.String"/>
+		<field name="remark" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="Result_Generate1" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="stu_StudentName" class="java.lang.String"/>
+	<parameter name="stu_StudentRoll" class="java.lang.String"/>
+	<parameter name="stu_year" class="java.lang.String"/>
+	<parameter name="stu_ExamYear" class="java.lang.String"/>
+	<parameter name="stu_Date" class="java.lang.String"/>
+	<parameter name="stu_isPass" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="txt_StudentName" class="java.lang.String"/>
+	<variable name="txt_StudentName1" class="java.lang.Integer" resetType="Page" calculation="DistinctCount">
+		<variableExpression><![CDATA[$F{txt_StudentName}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<textField>
+				<reportElement x="91" y="10" width="474" height="30" uuid="35f01cba-5c7b-4887-bb51-f375129178cd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["UNIVERSITY OF COMPUTER STUDIES, MANDALAY"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="50" width="237" height="31" uuid="05e80c1a-6adf-4720-a2e6-d3c1407da4c1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MARKS CERTIFICATE"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="91" height="81" uuid="551ecd3c-9a8d-44fa-9d97-40a7e2a1491e"/>
+				<imageExpression><![CDATA["images/images.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="135" height="20" uuid="6de0bc09-50e7-4d5d-b1fc-71c75c6919ed"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[This is to certify that]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="200" height="20" uuid="10a8c0fd-2360-4e43-b963-435c34456206"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[has obtained the following marks in the]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="20" width="110" height="20" uuid="07eae0a7-d976-4116-830b-c1b17db7388b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Examination held in"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="20" width="80" height="20" uuid="d9c0fad5-e274-4a11-8799-7b7e5549f2ec"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["September,"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="216" y="0" width="124" height="20" uuid="853707d3-3cc7-4390-91be-fc21e6446733"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stu_StudentName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="0" width="189" height="20" uuid="fe08a836-4f2e-4bb5-af96-570f2d46a90b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stu_StudentRoll}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="20" width="100" height="20" uuid="3282c02c-1465-4173-b6a2-8027445a41ec"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stu_ExamYear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="20" width="60" height="20" uuid="4078dd16-be1b-4674-b18c-1ff7ed77c5ca"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stu_year}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="181" y="15" width="215" height="35" uuid="e72318fd-db09-4c30-b38d-a324b842bc55"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[MARKS OBTAINED]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="267" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="10" width="550" height="257" uuid="6578014b-67ac-4b41-953b-fb4d5eb5d185">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="stuMarks" uuid="52920190-ed92-4758-97cf-b94c09f5e945">
+						<dataSourceExpression><![CDATA[$P{Result_Generate1}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="40" uuid="f7f90cc3-9d5d-471a-8faf-90b1c36481ef">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="40" height="30" uuid="90f80f76-056e-4a51-9995-f27913f2452c"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{no}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="280" uuid="9b1d47f4-7272-4769-9205-b31d1d4a8638">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="280" height="30" uuid="b63c40ad-2f61-4c55-8e59-823357bbdb46"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="14" isUnderline="true"/>
+								</textElement>
+								<text><![CDATA[SUBJECT]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="280" height="30" uuid="c7820751-4b61-4b0e-a622-e5b30bb05f91"/>
+								<textElement>
+									<font fontName="Times New Roman" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{sub}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="dc45a241-039f-4256-9fb0-9b5f9c5746fd">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="73bb06bf-3d4d-4142-b368-1b00eb929cf9"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="14" isUnderline="true"/>
+								</textElement>
+								<text><![CDATA[(Out of 100)]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="86bd1ca5-d516-47f6-b06f-00bb4b19a913"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{mark}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="64bdf26e-d18e-4a63-a791-5d7077dd492b">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" uuid="860bb986-fdd5-4f99-8fb0-043afa0bd635"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="14" isUnderline="true"/>
+								</textElement>
+								<text><![CDATA[Grade]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="30" uuid="ce700b08-ef44-4440-b2d2-4e3369e4ceee"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{grade}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="564d0dd2-59d2-48c3-8733-e9adac58cef0">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="18cd20c2-812a-44ee-b34a-c0890da01185"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="14" isUnderline="true"/>
+								</textElement>
+								<text><![CDATA[remark]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="30" uuid="0a319401-50d4-4975-bf74-71f5a57912ea"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{remark}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="30" uuid="bd6bce40-b4e7-443e-bacc-413b9a5a4d2d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Result :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="40" width="91" height="21" uuid="a5496f3f-d12f-46c7-b30a-92a32d4cad30"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Registrar]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="0" width="100" height="30" uuid="ac1dae8a-a787-4f11-a6ee-e53d42fe5581"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stu_isPass}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="89" splitType="Stretch">
+			<staticText>
+				<reportElement x="270" y="0" width="275" height="30" uuid="e04c8962-0566-41d7-93af-06d2c2501d1c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[University Of Computer Studies, Mandalay]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="30" width="100" height="20" uuid="18fb7249-0400-45d2-970e-0f5ee889c01b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Myanmar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-11" y="40" width="51" height="21" uuid="e7ad0b87-c372-4b40-80fc-4d94055961e1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="40" width="160" height="21" uuid="1c3f682a-d308-4957-abfb-88cef8e19655"/>
+				<textFieldExpression><![CDATA[$P{stu_Date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

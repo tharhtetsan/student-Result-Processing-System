@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import application.Card?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1087.0" prefWidth="1476.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.Generate_Result_Controller">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ToolBar prefHeight="71.0" prefWidth="1456.0">
+               <items>
+                  <HBox alignment="CENTER" prefHeight="51.0" prefWidth="549.0" spacing="20.0">
+                     <children>
+                        <JFXComboBox fx:id="cbo_year" onAction="#cbo_year_Act" prefHeight="42.0" prefWidth="198.0" promptText="Year" />
+                        <JFXComboBox fx:id="cbo_Major" onAction="#cbo_Major_Act" prefHeight="44.0" prefWidth="231.0" promptText="Major" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="398.0" spacing="20.0">
+                     <children>
+                        <JFXComboBox fx:id="cbo_stuNRC" onAction="#cbo_stuNRC_Act" prefHeight="41.0" prefWidth="283.0" promptText="Student NRC" />
+                        <JFXButton fx:id="btn_serarch" onAction="#btn_searchAction" prefHeight="33.0" prefWidth="68.0" style="-fx-background-color: #3d9970;" text=".">
+                           <graphic>
+                              <ImageView fx:id="btn_search" fitHeight="42.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../stu_project/icons/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="51.0" prefWidth="500.0" spacing="20.0">
+                     <children>
+                        <JFXComboBox fx:id="cbo_stuYear" prefHeight="45.0" prefWidth="256.0" promptText="Choose Year to Print" />
+                        <Button fx:id="btn_ViewResult" mnemonicParsing="false" onAction="#btn_ViewResult_Act" prefHeight="40.0" prefWidth="153.0" text="View Result" />
+                     </children>
+                  </HBox>
+               </items>
+            </ToolBar>
+            <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1489.0">
+               <content>
+                  <AnchorPane prefHeight="1477.0" prefWidth="1470.0">
+                     <children>
+                        <Card layoutX="82.0" layoutY="14.0" prefHeight="1046.0" prefWidth="1333.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="988.0" prefWidth="1466.0" spacing="30.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="168.0" prefWidth="1375.0">
+                                       <children>
+                                          <ImageView fitHeight="167.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/images.jpeg" />
+                                             </image>
+                                          </ImageView>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="UNIVERSITY OF COMPUTER STUDIES, MANDALAY MARKS CERTIFICATE" textAlignment="CENTER" wrappingWidth="888.2330017089844">
+                                             <font>
+                                                <Font size="34.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <Text fx:id="txt_about_mark" strokeType="OUTSIDE" strokeWidth="0.0" text="This is to certify that First YearMg Thar Htet San Roll No. 3CT-3 has obtained the following in the .Examination held September, 2013 ." wrappingWidth="1083.0198364257812">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="MARKS OBTAINED" textAlignment="CENTER" underline="true" wrappingWidth="238.943603515625">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <AnchorPane prefHeight="258.0" prefWidth="1333.0">
+                                       <children>
+                                          <TableView fx:id="tb_view" layoutX="135.0" layoutY="-4.0" prefHeight="361.0" prefWidth="1096.0">
+                                            <columns>
+                                              <TableColumn fx:id="col_no" prefWidth="75.0" text="No" />
+                                              <TableColumn fx:id="col_sub" prefWidth="600.0" text="SUBJECT" />
+                                                <TableColumn fx:id="col_mark" prefWidth="105.611328125" text="(Out of 100)" />
+                                                <TableColumn fx:id="col_grade" prefWidth="98.40869140625" text="Grade" />
+                                                <TableColumn fx:id="col_remark" prefWidth="193.8438720703125" text="Remark" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Result    :    ">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txt_isPass" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Registrar" textAlignment="CENTER" wrappingWidth="438.55035400390625">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="University Of Computer Studies, Mandalay  Myanmar" textAlignment="CENTER" wrappingWidth="443.86676025390625">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Text fx:id="txt_date" strokeType="OUTSIDE" strokeWidth="0.0" text="Date : 16/2/1998">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Card>
+                        <HBox alignment="CENTER" layoutX="118.0" layoutY="1225.0" prefHeight="106.0" prefWidth="1200.0" spacing="500.0">
+                           <children>
+                              <Button fx:id="btn_Clear" mnemonicParsing="false" onAction="#btn_Clear_Act" prefHeight="42.0" prefWidth="222.0" text="Clear" />
+                              <Button fx:id="btn_Generate" disable="true" mnemonicParsing="false" onAction="#btn_Generate_Act" prefHeight="45.0" prefWidth="246.0" text="Generate" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

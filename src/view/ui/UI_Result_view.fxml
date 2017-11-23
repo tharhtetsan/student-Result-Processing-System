@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import application.Button?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1458.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.Result_View_Controller">
+   <children>
+      <VBox layoutX="-1.0" layoutY="-3.0" prefHeight="606.0" prefWidth="1457.0">
+         <children>
+            <ToolBar prefHeight="67.0" prefWidth="1448.0">
+               <items>
+                  <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="1441.0" spacing="20.0">
+                     <children>
+                        <JFXRadioButton fx:id="rdo_1" onAction="#rdo_1_Act" prefHeight="63.0" prefWidth="137.0" text="First Year">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="rdo_toggleGroup" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="rdo_2" onAction="#rdo_2_Act" prefHeight="108.0" prefWidth="132.0" text="Second Year" toggleGroup="$rdo_toggleGroup" />
+                        <JFXRadioButton fx:id="rdo_3" onAction="#rdo_3_Act" prefHeight="63.0" prefWidth="137.0" text="Third Year" toggleGroup="$rdo_toggleGroup" />
+                        <JFXRadioButton fx:id="rdo_4" onAction="#rdo_4_Act" prefHeight="63.0" prefWidth="137.0" text="Fourth Year" toggleGroup="$rdo_toggleGroup" />
+                        <JFXRadioButton fx:id="rdo_5" onAction="#rdo_5_Act" prefHeight="63.0" prefWidth="137.0" text="Final Year" toggleGroup="$rdo_toggleGroup" />
+                        <JFXComboBox fx:id="cbo_major" onAction="#cbo_major_Act" prefHeight="34.0" prefWidth="148.0" promptText="Major" />
+                        <JFXComboBox fx:id="cbo_year" onAction="#cbo_year_Act" prefHeight="33.0" prefWidth="250.0" promptText="Acedimic Year" />
+                        <Button fx:id="btn_Search" onAction="#btn_Search_Act" prefHeight="36.0" prefWidth="110.0" text="Search" />
+                     </children>
+                  </HBox>
+               </items>
+            </ToolBar>
+            <AnchorPane prefHeight="724.0" prefWidth="1457.0">
+               <children>
+                  <TableView fx:id="tb_view" layoutX="14.0" layoutY="16.0" prefHeight="647.0" prefWidth="1092.0">
+                    <columns>
+                      <TableColumn fx:id="col_id" prefWidth="140.0" text="Id" />
+                        <TableColumn fx:id="col_name" prefWidth="250.0" text="Name" />
+                        <TableColumn fx:id="col_1" prefWidth="100.0" text="Course-1" />
+                        <TableColumn fx:id="col_2" prefWidth="100.0" text="Course-2" />
+                        <TableColumn fx:id="col_3" prefWidth="100.0" text="Course-3" />
+                        <TableColumn fx:id="col_4" prefWidth="100.0" text="Course-4" />
+                        <TableColumn fx:id="col_5" prefWidth="100.0" text="Course-5" />
+                        <TableColumn fx:id="col_6" prefWidth="100.0" text="Course-6" />
+                        <TableColumn fx:id="col_isPass" prefWidth="100.0" text="Is Pass" />
+                    </columns>
+                  </TableView>
+                  <GridPane layoutX="1104.0" layoutY="373.0" prefHeight="288.0" prefWidth="342.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.8958740234375" minWidth="10.0" prefWidth="98.265380859375" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.734619140625" minWidth="10.0" prefWidth="243.734619140625" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Course-1" wrappingWidth="85.9168701171875">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Course-2" wrappingWidth="93.5731201171875" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Course-3" wrappingWidth="94.8492431640625" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Course-4" wrappingWidth="97.4012451171875" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Course-5" wrappingWidth="94.84912109375" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Course-6" wrappingWidth="96.125244140625" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txt_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Intorducation to java programming" wrappingWidth="244.1466064453125" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txt_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Modeling Theory" wrappingWidth="241.594482421875" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txt_3" strokeType="OUTSIDE" strokeWidth="0.0" text="Alogrithm" wrappingWidth="241.854736328125" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txt_4" strokeType="OUTSIDE" strokeWidth="0.0" text="Computer Architecture" wrappingWidth="243.130859375" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txt_5" strokeType="OUTSIDE" strokeWidth="0.0" text="Electric Circuit" wrappingWidth="246.958984375" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txt_6" strokeType="OUTSIDE" strokeWidth="0.0" text="English" wrappingWidth="240.5787353515625" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

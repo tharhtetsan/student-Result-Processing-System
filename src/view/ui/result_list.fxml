@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import application.Card?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="835.0" prefWidth="1466.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.Result_list_Controller">
+   <children>
+      <ScrollPane layoutX="-10.0" layoutY="-22.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="857.0" prefWidth="1488.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="4209.0" prefWidth="1460.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="36.0" layoutY="52.0" prefHeight="4137.0" prefWidth="1375.0" spacing="30.0">
+                     <children>
+                        <Card prefHeight="715.0" prefWidth="1375.0" style="-fx-background-color: d7d9e0;">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="771.0" prefWidth="1440.0">
+                                 <children>
+                                    <Label fx:id="txt_title" contentDisplay="CENTER" prefHeight="42.0" prefWidth="555.0" text="Acedimic Result from 2012 to  2017">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <BarChart fx:id="bar_chart_main" prefHeight="684.0" prefWidth="1379.0" title="Overall Result">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                       <effect>
+                                          <Blend mode="GREEN" />
+                                       </effect>
+                                    </BarChart>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Card>
+                        <Card prefHeight="613.0" prefWidth="1413.0" style="-fx-background-color: d7d9e0;">
+                           <children>
+                              <HBox prefHeight="529.0" prefWidth="1412.0">
+                                 <children>
+                                    <AreaChart fx:id="Area_Chart_1" prefHeight="613.0" prefWidth="900.0" title="First Year">
+                                       <xAxis>
+                                          <CategoryAxis fx:id="CategoryAxis_main" side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis fx:id="NumverAxis_main" side="LEFT" />
+                                       </yAxis>
+                                    </AreaChart>
+                                    <StackPane prefHeight="470.0" prefWidth="448.0">
+                                       <children>
+                                          <PieChart fx:id="Pie_Chart_1" title="First Year Overall Result" />
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Card>
+                        <Card prefHeight="613.0" prefWidth="1412.0" style="-fx-background-color: d7d9e0;">
+                           <children>
+                              <HBox prefHeight="529.0" prefWidth="1412.0">
+                                 <children>
+                                    <AreaChart fx:id="Area_Chart_2" prefHeight="474.0" prefWidth="900.0" title="Second Year">
+                                       <xAxis>
+                                          <CategoryAxis fx:id="CategoryAxis_main1" side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis fx:id="NumverAxis_main1" side="LEFT" />
+                                       </yAxis>
+                                    </AreaChart>
+                                    <StackPane prefHeight="470.0" prefWidth="448.0">
+                                       <children>
+                                          <PieChart fx:id="Pie_Chart_2" title="Second Year Overall Result" />
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Card>
+                        <Card prefHeight="613.0" prefWidth="1412.0" style="-fx-background-color: d7d9e0;">
+                           <children>
+                              <HBox prefHeight="529.0" prefWidth="1412.0">
+                                 <children>
+                                    <AreaChart fx:id="Area_Chart_3" prefHeight="475.0" prefWidth="900.0" title="Third Year">
+                                       <xAxis>
+                                          <CategoryAxis fx:id="CategoryAxis_main2" side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis fx:id="NumverAxis_main2" side="LEFT" />
+                                       </yAxis>
+                                    </AreaChart>
+                                    <StackPane prefHeight="470.0" prefWidth="448.0">
+                                       <children>
+                                          <PieChart fx:id="Pie_Chart_3" title="Third Year Overall Result" />
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Card>
+                        <Card prefHeight="613.0" prefWidth="1412.0" style="-fx-background-color: d7d9e0;">
+                           <children>
+                              <HBox prefHeight="529.0" prefWidth="1412.0">
+                                 <children>
+                                    <AreaChart fx:id="Area_Chart_4" prefHeight="475.0" prefWidth="900.0" title="Fourth Year">
+                                       <xAxis>
+                                          <CategoryAxis fx:id="CategoryAxis_main3" side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis fx:id="NumverAxis_main3" side="LEFT" />
+                                       </yAxis>
+                                    </AreaChart>
+                                    <StackPane prefHeight="470.0" prefWidth="448.0">
+                                       <children>
+                                          <PieChart fx:id="Pie_Chart_4" title="Fourth Year Overall Result" />
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Card>
+                        <Card prefHeight="613.0" prefWidth="1412.0" style="-fx-background-color: d7d9e0;">
+                           <children>
+                              <HBox prefHeight="529.0" prefWidth="1412.0">
+                                 <children>
+                                    <AreaChart fx:id="Area_Chart_5" prefHeight="475.0" prefWidth="900.0" title="Final Year">
+                                       <xAxis>
+                                          <CategoryAxis fx:id="CategoryAxis_main4" side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis fx:id="NumverAxis_main4" side="LEFT" />
+                                       </yAxis>
+                                    </AreaChart>
+                                    <StackPane prefHeight="470.0" prefWidth="448.0">
+                                       <children>
+                                          <PieChart fx:id="Pie_Chart_5" title="Final Year Overalll Result" />
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Card>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>

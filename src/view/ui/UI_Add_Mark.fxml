@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="777.0" prefWidth="1422.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.Add_Exam_Marks_Controller">
+   <children>
+      <VBox layoutX="-1.0" layoutY="-2.0" prefHeight="826.0" prefWidth="1476.0">
+         <children>
+            <ToolBar prefHeight="55.0" prefWidth="1413.0">
+               <items>
+                  <HBox prefHeight="43.0" prefWidth="1403.0" spacing="40.0">
+                     <children>
+                        <HBox prefHeight="43.0" prefWidth="693.0" spacing="20.0">
+                           <children>
+                              <TextField fx:id="txt_filePath" editable="false" prefHeight="36.0" prefWidth="533.0" promptText="choose excel file path.................................." />
+                              <Button fx:id="btn_fileChoose" mnemonicParsing="false" onAction="#btn_fileChoose_Act" prefHeight="33.0" prefWidth="145.0" text="File Choose" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </items>
+            </ToolBar>
+            <Pane fx:id="secondPane" prefHeight="767.0" prefWidth="1424.0">
+               <children>
+                  <TableView fx:id="tb_sub" layoutX="14.0" layoutY="12.0" prefHeight="685.0" prefWidth="1187.0">
+                    <columns>
+                      <TableColumn fx:id="col_roll" prefWidth="75.0" text="Roll." />
+                      <TableColumn fx:id="col_name" prefWidth="200.0" text="Name" />
+                        <TableColumn fx:id="col_sub1" prefWidth="150.0" text="sub1" />
+                        <TableColumn fx:id="col_sub2" prefWidth="150.0" text="sub2" />
+                        <TableColumn fx:id="col_sub3" prefWidth="150.0" text="sub3" />
+                        <TableColumn fx:id="col_sub4" prefWidth="150.0" text="sub4" />
+                        <TableColumn fx:id="col_sub5" prefWidth="150.0" text="sub5" />
+                        <TableColumn fx:id="col_sub6" prefWidth="150.0" text="sub6" />
+                    </columns>
+                  </TableView>
+                  <VBox alignment="CENTER" layoutX="1201.0" layoutY="20.0" prefHeight="171.0" prefWidth="215.0" spacing="30.0">
+                     <children>
+                        <JFXComboBox fx:id="cbo_year" onAction="#cbo_year_Act" onTouchReleased="#cbo_year_Act" prefHeight="37.0" prefWidth="212.0" promptText="Year" />
+                        <JFXComboBox fx:id="cbo_major" onAction="#cbo_major_Act" prefHeight="43.0" prefWidth="335.0" promptText="Major" />
+                        <JFXComboBox fx:id="cbo_AceYear" onAction="#cbo_AceYear_Act" prefHeight="39.0" prefWidth="268.0" promptText="Acedimic Year" />
+                        <JFXComboBox fx:id="cbo_term" prefHeight="39.0" prefWidth="262.0" promptText="Term" />
+                        <Button fx:id="btn_Search" mnemonicParsing="false" onAction="#btn_Search_Act" prefHeight="35.0" prefWidth="91.0" text="Search" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="btn_clear" layoutX="1210.0" layoutY="653.0" mnemonicParsing="false" onAction="#btn_clear_Act" prefHeight="38.0" prefWidth="197.0" text="Clear" />
+                  <Button fx:id="btn_Save" layoutX="1211.0" layoutY="590.0" mnemonicParsing="false" onAction="#btn_Save_Act" prefHeight="38.0" prefWidth="195.0" text="Save" />
+               </children></Pane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

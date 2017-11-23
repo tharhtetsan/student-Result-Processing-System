@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="902.0" prefWidth="1458.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.Course_listView_Controller">
+   <children>
+      <VBox layoutX="-1.0" layoutY="-2.0" prefHeight="909.0" prefWidth="1476.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="1476.0" spacing="30.0">
+               <children>
+                  <ToolBar prefHeight="71.0" prefWidth="1456.0">
+                     <items>
+                        <HBox prefHeight="59.0" prefWidth="339.0">
+                           <children>
+                              <JFXRadioButton fx:id="rdo_ViewAll" onAction="#rdo_ViewAllAction" prefHeight="63.0" prefWidth="137.0" text="View all">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="rdo_toggleGroup" />
+                                 </toggleGroup>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="rdo_SearchID" onAction="#rdo_SearchIDAction" prefHeight="108.0" prefWidth="132.0" text="Search Course" toggleGroup="$rdo_toggleGroup" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="51.0" prefWidth="549.0" spacing="20.0">
+                           <children>
+                              <JFXComboBox fx:id="cbo_year" onAction="#cbo_year_Act" prefHeight="42.0" prefWidth="198.0" promptText="Year" />
+                              <JFXComboBox fx:id="cbo_Major" onAction="#cbo_Major_Act" prefHeight="44.0" prefWidth="231.0" promptText="Major" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="398.0" spacing="20.0">
+                           <children>
+                              <JFXComboBox fx:id="cbo_courseId" prefHeight="41.0" prefWidth="283.0" promptText="Course ID" />
+                              <JFXButton fx:id="btn_serarch" onAction="#btn_searchAction" prefHeight="33.0" prefWidth="68.0" style="-fx-background-color: #3d9970;" text=".">
+                                 <graphic>
+                                    <ImageView fx:id="btn_search" fitHeight="42.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../stu_project/icons/search.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </items>
+                  </ToolBar>
+               </children>
+            </HBox>
+            <Pane fx:id="secondPane" prefHeight="831.0" prefWidth="1471.0" />
+         </children>
+      </VBox>
+   </children>
+</Pane>

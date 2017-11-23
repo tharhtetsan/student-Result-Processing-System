@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="805.0" prefWidth="1462.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.Student_list_Controller">
+   <children>
+      <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="805.0" prefWidth="1489.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3202.0" prefWidth="1490.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="7.0" layoutY="12.0" prefHeight="3128.0" prefWidth="1425.0" spacing="30.0">
+                     <children>
+                        <TitledPane animated="false" expanded="false" text="First Year">
+                           <content>
+                              <TableView fx:id="tb_view1" prefHeight="500.0" prefWidth="1397.0">
+                                 <columns>
+                                    <TableColumn fx:id="ID_1" prefWidth="150.0" text="ID" />
+                                    <TableColumn fx:id="Name_1" prefWidth="250.0" text="Name" />
+                                    <TableColumn fx:id="Gender_1" prefWidth="100.0" text="Gender" />
+                                    <TableColumn fx:id="Nrc_1" prefWidth="200.0" text="Nrc" />
+                                    <TableColumn fx:id="year_1" prefWidth="150.0" text="Year" />
+                                    <TableColumn fx:id="major_1" prefWidth="150.0" text="Major" />
+                                    <TableColumn fx:id="roll_1" prefWidth="100.0" text="Current Roll" />
+                                    <TableColumn fx:id="address_1" prefWidth="300.0" text="Addresss" />
+                                 </columns></TableView>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" expanded="false" text="Second Year">
+                           <content>
+                              <TableView fx:id="tb_view11" prefHeight="500.0" prefWidth="1397.0">
+                                 <columns>
+                                    <TableColumn fx:id="ID_11" prefWidth="150.0" text="ID" />
+                                    <TableColumn fx:id="Name_11" prefWidth="250.0" text="Name" />
+                                    <TableColumn fx:id="Gender_11" prefWidth="100.0" text="Gender" />
+                                    <TableColumn fx:id="Nrc_11" prefWidth="200.0" text="Nrc" />
+                                    <TableColumn fx:id="year_11" prefWidth="150.0" text="Year" />
+                                    <TableColumn fx:id="major_11" prefWidth="150.0" text="Major" />
+                                    <TableColumn fx:id="roll_11" prefWidth="100.0" text="Current Roll" />
+                                    <TableColumn fx:id="address_11" prefWidth="300.0" text="Addresss" />
+                                 </columns>
+                              </TableView>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" expanded="false" text="Third Year">
+                           <content>
+                              <TableView fx:id="tb_view12" prefHeight="500.0" prefWidth="1397.0">
+                                 <columns>
+                                    <TableColumn fx:id="ID_12" prefWidth="150.0" text="ID" />
+                                    <TableColumn fx:id="Name_12" prefWidth="250.0" text="Name" />
+                                    <TableColumn fx:id="Gender_12" prefWidth="100.0" text="Gender" />
+                                    <TableColumn fx:id="Nrc_12" prefWidth="200.0" text="Nrc" />
+                                    <TableColumn fx:id="year_12" prefWidth="150.0" text="Year" />
+                                    <TableColumn fx:id="major_12" prefWidth="150.0" text="Major" />
+                                    <TableColumn fx:id="roll_12" prefWidth="100.0" text="Current Roll" />
+                                    <TableColumn fx:id="address_12" prefWidth="300.0" text="Addresss" />
+                                 </columns>
+                              </TableView>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" expanded="false" text="Fourth Year">
+                           <content>
+                              <TableView fx:id="tb_view13" prefHeight="500.0" prefWidth="1397.0">
+                                 <columns>
+                                    <TableColumn fx:id="ID_13" prefWidth="150.0" text="ID" />
+                                    <TableColumn fx:id="Name_13" prefWidth="250.0" text="Name" />
+                                    <TableColumn fx:id="Gender_13" prefWidth="100.0" text="Gender" />
+                                    <TableColumn fx:id="Nrc_13" prefWidth="200.0" text="Nrc" />
+                                    <TableColumn fx:id="year_13" prefWidth="150.0" text="Year" />
+                                    <TableColumn fx:id="major_13" prefWidth="150.0" text="Major" />
+                                    <TableColumn fx:id="roll_13" prefWidth="100.0" text="Current Roll" />
+                                    <TableColumn fx:id="address_13" prefWidth="300.0" text="Addresss" />
+                                 </columns>
+                              </TableView>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" expanded="false" text="Final Year">
+                           <content>
+                              <TableView fx:id="tb_view14" prefHeight="500.0" prefWidth="1397.0">
+                                 <columns>
+                                    <TableColumn fx:id="ID_14" prefWidth="150.0" text="ID" />
+                                    <TableColumn fx:id="Name_14" prefWidth="250.0" text="Name" />
+                                    <TableColumn fx:id="Gender_14" prefWidth="100.0" text="Gender" />
+                                    <TableColumn fx:id="Nrc_14" prefWidth="200.0" text="Nrc" />
+                                    <TableColumn fx:id="year_14" prefWidth="150.0" text="Year" />
+                                    <TableColumn fx:id="major_14" prefWidth="150.0" text="Major" />
+                                    <TableColumn fx:id="roll_14" prefWidth="100.0" text="Current Roll" />
+                                    <TableColumn fx:id="address_14" prefWidth="300.0" text="Addresss" />
+                                 </columns>
+                              </TableView>
+                           </content>
+                        </TitledPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>

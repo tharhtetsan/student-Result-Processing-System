@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-08-19T21:52:00 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Tanscript_Generate_Templates" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c00f769c-2d1f-4fc7-bc25-5974828bd625">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="stu_Date" class="java.lang.String"/>
+	<parameter name="stu_about" class="java.lang.String"/>
+	<parameter name="stu_t1" class="java.lang.String"/>
+	<parameter name="stu_t2" class="java.lang.String"/>
+	<parameter name="stu_t3" class="java.lang.String"/>
+	<parameter name="stu_t4" class="java.lang.String"/>
+	<parameter name="stu_t5" class="java.lang.String"/>
+	<parameter name="stu_about1" class="java.lang.String"/>
+	<parameter name="stu_sub" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="169" splitType="Stretch">
+			<staticText>
+				<reportElement x="115" y="-20" width="430" height="30" uuid="1fea2b97-eb02-4223-aef5-820a3f2ed2d7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<text><![CDATA[UNIVERSITY OF COMPUTER STUDIES, MANDALAY]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="10" width="430" height="30" uuid="04a32846-c019-409f-aed6-c1a2ff75d355"/>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PATHEINGYI TOWNSHIP,MANDALAY"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="90" y="40" width="460" height="25" uuid="14eb2d33-77b0-4610-8bce-79b51d3ef28e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<text><![CDATA[THE REPUBLIC OF THE UNION OF MYANMAR]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="-20" width="80" height="85" uuid="63adb81b-5684-4b75-a3a6-619898f14226"/>
+				<imageExpression><![CDATA["images/images.jpeg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="410" y="80" width="140" height="24" uuid="d36edb01-505c-4e14-ab9a-8c9745a7b6a6"/>
+				<textFieldExpression><![CDATA[$P{stu_Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="140" width="129" height="25" uuid="f3235b31-d78f-4e64-9415-cc292506370d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Subject                    ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="151" y="140" width="384" height="25" uuid="83637fd8-3252-4598-b741-33a9a2ac5b49"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stu_sub}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="120" y="104" width="260" height="26" uuid="c535b2c5-ee4e-4562-8d4f-a443f172608e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[To Whom It May Concern :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="70" width="561" height="5" uuid="fc9be421-5af2-420d-9ebe-5200cc3c30e1"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="166" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="30" width="540" height="98" uuid="9a6a12fd-d92a-4245-83ca-7e8799fd64aa"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stu_about}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="110" y="130" width="340" height="20" uuid="999355e3-0619-4188-a55a-a3a60f7d946a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Academic Transcript is as follow ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="227" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="0" width="200" height="30" uuid="131d77df-3338-4bda-8561-6301f73bcd3e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[1. Date of enrollment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="40" width="200" height="35" uuid="1eceddc9-5c48-4870-a6e3-c06a606b9e1f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[2. List of all subjects taken and the grades obtained certificates]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="0" width="290" height="30" uuid="47992ad8-788a-46b8-a889-71dda5da7942"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stu_t1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="45" width="290" height="30" uuid="a110528a-de23-4799-8e6e-27131ec13b13"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stu_t2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="92" width="290" height="35" uuid="183a6b82-0df1-41f2-a956-5ec0fcc30f57"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stu_t3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="90" width="200" height="35" uuid="96c40f60-3453-44ba-8d5e-42e52c19f5cd"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[3. Title of degree awarded and Date of conferment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="140" width="200" height="30" uuid="c608593c-6432-4eee-90a1-a5fef697d0db"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[4. Final Year  G.P.A]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="180" width="200" height="33" uuid="103bdf5f-0bdb-42fe-ac1f-7b673a796020"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[5. Explanation of grades]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="140" width="290" height="30" uuid="ce5e54ed-1043-4f1f-95f9-f678daedba17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stu_t4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="183" width="290" height="30" uuid="449329e8-c6db-44e5-949b-0f13b95c8d5c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stu_t5}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="112" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="30" width="520" height="60" uuid="b39c126d-35bd-419d-8cff-cc903ecd0b7d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stu_about1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="240" y="0" width="264" height="20" uuid="4d497fd6-e88e-47c1-8b71-41e78ede802b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15"/>
+				</textElement>
+				<text><![CDATA[Registrar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="25" width="360" height="25" uuid="2f6d7595-898e-4db9-81c6-23762331429b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15"/>
+				</textElement>
+				<text><![CDATA[University Of Computer Studies,Mandalay]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="50" width="280" height="30" uuid="98384cee-5efb-4d63-93f2-696317b8eb9a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15"/>
+				</textElement>
+				<text><![CDATA[Myanmar]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>

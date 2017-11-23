@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="835.0" prefWidth="1466.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.Result_list_Controller">
+   <children>
+      <ScrollPane layoutX="-10.0" layoutY="-22.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="857.0" prefWidth="1452.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3119.0" prefWidth="1460.0">
+               <children>
+                  <Label layoutX="564.0" layoutY="47.0" prefHeight="42.0" prefWidth="555.0" text="Acedimic Result from _____________________ to ________________________">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <LineChart fx:id="line_chart_main" alternativeColumnFillVisible="true" layoutX="111.0" layoutY="123.0" prefHeight="505.0" prefWidth="1273.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <VBox alignment="CENTER" layoutX="475.0" layoutY="727.0" prefHeight="2378.0" prefWidth="935.0">
+                     <children>
+                        <AreaChart>
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </AreaChart>
+                        <Label alignment="CENTER" prefHeight="49.0" prefWidth="1058.0" text="First Year">
+                           <font>
+                              <Font name="Andale Mono" size="18.0" />
+                           </font>
+                        </Label>
+                        <AreaChart>
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </AreaChart>
+                        <Label alignment="CENTER" prefHeight="55.0" prefWidth="1096.0" text="Second Year">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <AreaChart>
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </AreaChart>
+                        <Label alignment="CENTER" prefHeight="49.0" prefWidth="1077.0" text="Third Year">
+                           <font>
+                              <Font name="Andale Mono" size="18.0" />
+                           </font>
+                        </Label>
+                        <AreaChart>
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </AreaChart>
+                        <Label alignment="CENTER" prefHeight="55.0" prefWidth="1090.0" text="Fourth Year">
+                           <font>
+                              <Font name="Andale Mono" size="18.0" />
+                           </font>
+                        </Label>
+                        <AreaChart>
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </AreaChart>
+                        <Label alignment="CENTER" prefHeight="49.0" prefWidth="1026.0" text="Final Year">
+                           <font>
+                              <Font name="Andale Mono" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Label alignment="CENTER" layoutX="371.0" layoutY="645.0" prefHeight="67.0" prefWidth="910.0" text="Overall Result Condition" textAlignment="CENTER">
+                     <font>
+                        <Font name="Andale Mono" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>
